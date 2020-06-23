@@ -1,0 +1,22 @@
+{
+  "name": "homeservenow",
+  "version": "1.0.0",
+  "description": "a simple API which can store tradespeople and their locations",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sim-ware/HomeServeNow.git"
+  },
+  "author": "Samir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sim-ware/HomeServeNow/issues"
+  },
+  "homepage": "https://github.com/sim-ware/HomeServeNow#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
