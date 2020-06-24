@@ -15,8 +15,16 @@ app.post("/jobs", async (req, res) => {
   res.json(job);
 });
 
+// g E T a L L a V A I L A B L E j O B S f O R a t R A D E S p E R S O N
+// // // // // // // // // // // // // // // // // // // // // // // // //
+app.get("/tradespeople/availableJobs", async (req, res) => {
+  const id = req.query.id;
+  console.log(id);
+  res.json(id);
+});
+
 // c R E A T E t R A D E S P E R S O N
-// // // // // // // // // // // // //
+// // // // // // // // // // // // // eventually hide this - should only be used by prefetchers
 app.post("/tradespeople", async (req, res) => {
   await tradespersonRepository.createTradesperson(req.body);
   res.json(req.body);
