@@ -11,8 +11,8 @@ app.listen(3000, function () {
 // c R E A T E j O B
 // // // // // // //
 app.post("/jobs", async (req, res) => {
-  await jobRepository.createJob(req.body);
-  res.json(req.body);
+  const job = await jobRepository.createJob(req.body);
+  res.json(job);
 });
 
 // c R E A T E t R A D E S P E R S O N
