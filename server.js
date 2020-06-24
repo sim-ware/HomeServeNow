@@ -19,8 +19,8 @@ app.post("/jobs", async (req, res) => {
 // // // // // // // // // // // // // // // // // // // // // // // // //
 app.get("/tradespeople/availableJobs", async (req, res) => {
   const id = req.query.id;
-  console.log(id);
-  res.json(id);
+  const availableJobs = await tradespersonRepository.getAvailableJobsById(id);
+  res.json(availableJobs);
 });
 
 // c R E A T E t R A D E S P E R S O N

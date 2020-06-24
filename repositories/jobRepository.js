@@ -27,7 +27,7 @@ module.exports = {
       nearbyTradespeopleIds,
     };
 
-    orm.createOne("job", job);
+    orm.createOne("jobs", job);
     return job;
   },
 };
