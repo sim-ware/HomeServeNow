@@ -22,10 +22,3 @@ app.get("/tradespeople/availableJobs", async (req, res) => {
   const availableJobs = await tradespersonRepository.getAvailableJobsById(id);
   res.json(availableJobs);
 });
-
-// c R E A T E t R A D E S P E R S O N
-// // // // // // // // // // // // // eventually hide this - should only be used by prefetchers
-app.post("/tradespeople", async (req, res) => {
-  await tradespersonRepository.createTradesperson(req.body);
-  res.json(req.body);
-});
