@@ -8,6 +8,12 @@ app.listen(3000, function () {
   console.log("listening on 3000");
 });
 
+// t E S T
+// // // //
+app.get("/", async (_, res) => {
+  res.send("test");
+});
+
 // c R E A T E j O B
 // // // // // // //
 app.post("/jobs", async (req, res) => {

@@ -4,6 +4,7 @@
   "description": "a simple API which can store tradespeople and their locations",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "npm run test"
   },
   "repository": {
