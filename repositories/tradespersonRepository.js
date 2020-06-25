@@ -8,18 +8,20 @@ module.exports = {
   getAvailableJobsById: async (id) => {
     const result = [];
     const allJobs = await orm.getAll("jobs");
-    // const tradesPerson = await orm.getOne("tradespeople", id);
-    const jobsfilteredByTrade = allJobs.filter((job) => {
-      console.log(job.description);
-    });
+    const tradesPerson = await orm.getOne("tradespeople", id);
 
-    allJobs.forEach((job) => {
+    const jobsfilteredByTrade = allJobs.filter(
+      (job) => tradesPerson.description === job.description
+    );
+
+    jobsfilteredByTrade.forEach((job) => {
       job.nearbyTradespeopleIds.forEach((tradespersonId) => {
         if (tradespersonId.toString() === id) {
           result.push(job);
         }
       });
     });
+
     return result;
   },
 };
