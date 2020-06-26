@@ -4,15 +4,7 @@ const express = require("express");
 const app = express();
 
 app.use(express.json());
-app.listen(process.env.PORT || 5000, function () {
-  console.log("listening on 3000");
-});
-
-// t E S T
-// // // //
-app.get("/", async (_, res) => {
-  res.send(JSON.stringify({ Hello: "World" }));
-});
+app.listen(process.env.PORT || 5000);
 
 // c R E A T E j O B
 // // // // // // //
