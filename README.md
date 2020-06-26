@@ -1,5 +1,6 @@
 # HomeServeNow Tech Test - Back End
-Techs used: node.js, express, mongoDB
+Techs used: node.js, express, mongoDB.
+
 This API is deployed at `https://home-serve-now.herokuapp.com/`, and has two routes exposed.
 
 ## POST `/jobs`
