@@ -11,7 +11,7 @@ app.listen(3000, function () {
 // t E S T
 // // // //
 app.get("/", async (_, res) => {
-  res.send("test");
+  res.send(JSON.stringify({ Hello: "World" }));
 });
 
 // c R E A T E j O B
